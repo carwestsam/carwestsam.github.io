@@ -70,4 +70,4 @@ theme: landscape
 deploy:
   type: git
   repo: https://github.com/carwestsam/hexo_pages.git
-  branch: hexo_server
+  branch: master
