@@ -69,5 +69,5 @@ theme: landscape
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/carwestsam/carwestsam.github.io
+  repo: https://github.com/carwestsam/hexo_pages.git
   branch: hexo_server
