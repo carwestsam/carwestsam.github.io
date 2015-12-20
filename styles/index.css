@@ -15,11 +15,20 @@ body{
     background-size: cover;
 }
 
+div.cover{
+    position : absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: rgba(0,0,0,0.6);
+}
+
 h1.blog-title{
-    color: dimgray;
-    font-family: monospace;
+    color: lightcyan;
+    font-family :fantasy;
     font-size: 2em;
-    padding-left: .5em;
+    padding-left: 1em;
+    padding-top: 1em;
 }
 div.passage-navigate{
     display: block;
@@ -27,14 +36,16 @@ div.passage-navigate{
     padding: 1em;
     
     width: 18em;
-    
-    background-color: rgba(200,200,255, 0.6);
 }
 div.passage-navigate a{
     display: block;
+    padding-top: .5em;
+    
     text-decoration: none;
     color: dimgray;
     font-weight: bold;
     font-size: 1.2em;
+    font-family: monospace;
+    color: lightgray;
     cursor: pointer;
 }
