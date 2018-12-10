@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="styles/index.css"></link>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!--
+      <link rel="stylesheet" type="text/css" href="styles/index.css"></link>
+    -->
     <title>Welcome, Friend</title>
-</head>
-
-<body>
-<div class="cover"></div>
-   <h1 class="blog-title"> Cedric's Blog </h1>
-</body>
-
+    <style>
+      body {
+        background: url("https://source.unsplash.com/daily") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      .title {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cover"></div>
+    <h1 class="title">Welcome</h1>
+  </body>
+  <script>
+    document.addEventListener(
+      "DOMContentLoaded",
+      function() {
+        let body = document.documentElement;
+        let getFullScreenElement = function() {
+            return document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement || document.mozFullscreenElement
+        }
+        let requestFullscreen = function () {
+            return body.requestFullscreen || body.webkitRequestFullscreen || body.mozRequestFullScreen || body.msRequestFullscreen
+        }
+        let tfs = function toggleFullScreen() {
+          if (!getFullScreenElement()) {
+            if (body.requestFullscreen) {
+              body.requestFullscreen();
+            } else if (body.webkitRequestFullscreen) {
+              body.webkitRequestFullscreen();
+            } else if (body.mozRequestFullScreen) {
+              body.mozRequestFullScreen();
+            } else if (body.msRequestFullscreen) {
+              body.msRequestFullscreen();
+            }
+          }
+        };
+        // debugger
+        body.addEventListener("click", function() {
+          console.log("good1");
+          tfs();
+          console.log("good");
+        });
+      },
+      false
+    );
+  </script>
 </html>
